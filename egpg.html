@@ -1,0 +1,367 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>table styles</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script type="text/javascript">
+	  	   $(document).ready(function(){
+				  $("span").find("label").css({"width":"15%" ,"margin-left" : "2%","color":"#38cbc3","margin-top":"0%"});
+				});
+	  	   $(document).ready(function(){
+				  $("span").find("input[type=text]").css({"border-color" :"#b5b5b5","border-radius":"4px","margin-top":"1%","background-color":"#f6f6f7"});
+				});
+	  	   $(document).ready(function(){
+				  $("span").find("input[type=text]#date_pg").css({"width":"27%"});
+				});
+	  	   $(document).ready(function(){
+				  $("span").find("input[type=text]#Time_pg").css({"width":"16.3%"});
+				});
+	  	    
+	  	    $(document).ready(function(){
+				  $("div").find("h5.Triage").css({"margin-top" :"28%"});
+				})
+	  	    $(document).ready(function(){
+				  $("div").find("h5").css({"padding-top" :"4px","padding-bottom":"4px"});
+				})
+	  	    $(document).ready(function(){
+				  $("div").find("h5.Emergency").css({"background-color" :"#cd0700","margin-bottom":"3%"});
+				})
+	  	    $(document).ready(function(){
+				  $("div").find("h5.VeryUrgent").css({"background-color" :"#ff830e","margin-top":"3%","margin-bottom":"3%"});
+				})
+	  	     $(document).ready(function(){
+				  $("div").find("h5.Urgent").css({"background-color" :"#fffd0e","color":"black","margin-top":"3%","margin-bottom":"3%"});
+				})
+	  	     $(document).ready(function(){
+				  $("div").find("h5.Deceased").css({"background-color" :"#0b0bc3","margin-top":"3%","margin-bottom":"3%"});
+				})
+	  	     $(document).ready(function(){
+				  $("span").siblings("label").css({"color" :"#38cbc3"});
+				})
+	  	     $(document).ready(function(){
+				  $("span").siblings("input[type=text].main").css({"border-color" :"#b5b5b5","border-radius":"4px","margin-top":"1%","background-color":"#f6f6f7","margin-right":"24.5%"});
+				})
+	  	      $(document).ready(function(){
+				  $("span").siblings("span.side").css({"float":"right","margin-right":"4%"});
+				})
+	  	       $(document).ready(function(){
+				  $("span").childern().css({"color":"red"});
+				})
+	  	       $(document).ready(function(){
+				  $("div").find("h5.hd1").css({"margin-bottom":"8%"});
+				})
+	  	        $(document).ready(function(){
+				  $("div").find("input[type=checkbox]").css({"margin-left":"2%","margin-bottom":"1%"});
+				})
+				$(document).ready(function(){
+				  $("div").find("div.VU").css({"margin-left":"1%"});
+				})
+				$(document).ready(function(){
+                 $("label").filter(".reded").css("color", "red");});
+
+				$(document).ready(function(){
+					        var date = new Date();
+							var day = date.toISOString().slice(8,10);
+							var month =date.toISOString().slice(5,7);
+							var year = date.toISOString().slice(0,4)
+
+							var currentTime = date.getHours() + ':' + date.getMinutes();
+
+						document.getElementById('date_pg').value = day + "/"+month+"/"+year
+							document.getElementById('Time_pg').value = currentTime;
+				})
+
+	  	     
+		</script>
+		<style type="text/css">
+			*{
+				box-sizing: border-box;
+			}
+			
+			 #boxes {
+		        content: "";
+		        display: table;
+		        clear: both;
+		      }
+		      div{
+				
+				float: left;
+			}
+
+     /*This for setting the size of the div elements and also making them inline-bloack so they are displayed one after the other in order */
+			.cl1{
+				width: 16%;
+	
+			}
+			.cl2{
+				width: 35%;
+				
+
+			}
+			.cl3{
+				width: 26%;			
+
+			}
+			.cl4{
+				width: 20%;
+				
+			}
+			.cl4,.cl3,.cl2,.cl1{
+				margin: 0 0 0 0.6%;
+				height: 100px;
+			}
+	
+			.VU{
+				float: left;
+				width: 50%;
+				position: relative;
+			}
+
+			.hd1,.hd2,.hd3,.hd4,.hd5,.hd6,.hd7{
+				border-radius: 5px;
+				text-align: center;
+				margin: 0 0 1% 0;
+			}
+			.hd1,.hd6,.hd7{
+				background-color: grey;
+			}
+			input[type=text]{
+				width: 22%;
+				text-align: right;
+
+			}
+			select{
+				width: 21.8%;
+				margin-right: 0%;
+				text-align: right;
+			}
+			.cl3 label{
+				width: 25%;
+				display: inline-block;
+			}
+			h5{
+				color: white;
+				font-family: Movement , Verdana ,sans-serif;
+				font-weight: normal;
+				font-size: 15px;
+			}
+			span{
+				font-weight: bold;
+			}
+			span.first{
+				margin-left: 2%;
+
+			}
+			.lst{
+				margin-left: 15%;
+			}
+			p{
+				text-align: right;
+				margin: 0 11% 0 0;
+				font-weight: bold;
+			}
+			.last{
+				width: 65%;
+				display: inline-block;
+			}
+			#date_pg,#Time_pg{
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="cl1">
+			<h5 class="hd1">EMS Notes</h5> 
+			<span class="first">Presenting Complaints:</span><br>
+			<span class="first">Onset:</span><br>
+			<span class="first">Hx:</span><br>
+			<span class="first">Allergies:</span><br>
+			<span class="first">illness:</span><br>
+			<span class="first">Vitals:</span><br>
+			<span class="first">P:200</span><br>
+			<span class="first">BP: /98</span><br>
+			<span class="first">RR: 78</span><br>
+			<span class="first">O2 Sat:24</span><br>
+			<span class="first">Supplemental O2</span><br>
+			<span class="first">T:43</span><br>
+			<span class="first">AVPU:V</span><br>
+			<span class="first">GCS:0</span><br>
+			<span class="first">Trauma:</span><br>
+			<span class="first">Mobility:</span><br>
+			<span class="first">Treatment:</span><br>
+
+			<h5 class="hd1 Triage">Triage History</h5>
+			<form>
+				<input type="checkbox" name="abdomina_pain1" value="Abdominal_pain" id="Triage_Q1"><label>Abdominal pain</label><br>
+				<input type="checkbox" name="Backache" value="Backache" id="Triage_Q2"><label>Backache</label><br>
+				<input type="checkbox" name="Diabetes" value="Diabetes" id="Triage_Q3"><label>Diabetes</label><br>
+				<input type="checkbox" name="Bleeding_Hx" value="Bleeding Hx" id="Triage_Q4"><label>Bleeding Hx</label><br>
+				<input type="checkbox" name="Bleeding_PO" value="Bleeding_PO" id="Triage_Q5"><label>Bleeding PO,PR or Trauma site</label><br>
+				<input type="checkbox" name="Bleeding_P" value="Bleeding_PV" id="Triage_Q6"><label>Bleeding PV</label><br>
+			</form>	
+		  
+		</div>
+		<div class="cl2">
+			<h5 class="hd2 Emergency">Emergency</h5>
+			<form>
+				<input type="checkbox" name="Obstruction_airway-not_Breating" value="not_breating_Emergency" id="Emergency_Q1"><label>Obstruction Airway-not breating</label><br>
+
+				<input type="checkbox" name="Seizure-current" value="Seizure_Emergency" id="Emergency_Q2"><label>Seizure-current</label><br>
+
+				<input type="checkbox" name="Burn_Emergency" value="Burn_Emergency" id="Emergency_Q3"><label>Burn - facial/inhalation</label><br>
+
+				<input type="checkbox" name="Hypoglycaemia-glucose<3" value="Hypoglycaemia_Emergency" id="Emergency_Q4"><label>Hypoglycaemia-glucose<3</label><br>
+
+				<input type="checkbox" name="Cardiac_arrest" value="Cardiac_arres_Emergency" id="Emergency_Q5"><label>Cardiac arrest<label><br>
+			</form>
+
+			<h5 class="hd3 VeryUrgent">Very Urgent</h5>
+			<div class="VU">
+			<form class="vrgfrm1">
+
+				<input type="checkbox" name="energy_transfer" value="energy_transfer_veryUrgent" id="veryUrgent_Q1" checked="true"><label>High energy transfer</label><br>
+
+				<input type="checkbox" name="SOB_acute" value="SOB_veryUrgent" id="veryUrgent_Q2"><label>SOB-acute</label><br>
+
+				<input type="checkbox" name="LOC_reduced" value="LOC_reduced_veryUrgent" id="veryUrgent_Q3"><label>LOC reduced/confused</label><br>
+
+				<input type="checkbox" name="coughing_blood" value="coughing_blood_veryUrgent" id="veryUrgent_Q4"><label>coughing blood</label><br>
+
+				<input type="checkbox" name="Chest_pain" value="Chest_pain_veryUrgent" id="veryUrgent_Q5"><label>Chest pain</label><br>
+
+				<input type="checkbox" name="stabbed_neck" value="stabbed_neck_veryUrgent" id="veryUrgent_Q6"><label>stabbed neck</label><br>
+
+				<input type="checkbox" name="Haemorrhage_uncontrolled" value="Haemorrhage_uncontrolled_veryUrgent" id="veryUrgent_Q7"><label>Haemorrhage-uncontrolled</label><br>
+
+				<input type="checkbox" name="Seizure_post_ictal" value="Seizure_post_ictal_veryUrgent" id="veryUrgent_Q8"><label>Seizure-post ictal</label><br>
+
+				<input type="checkbox" name="Focal_neurology_acurate(stroke)" value="Focal_neurology_acurate(stroke)_veryUrgent" id="veryUrgent_Q9"><label>Focal neurology - acurate(stroke)</label><br>
+
+				<input type="checkbox" name="Aggression" value="Aggression_veryUrgent" id="veryUrgent_Q10"><label>Aggression</label><br>
+
+
+				<input type="checkbox" name="Threatened_limb" value="Threatened_limb_veryUrgent" id="veryUrgent_Q11"><label>Threatened limb</label><br>
+
+
+				<input type="checkbox" name="Eye_injury<" value="Eye_injury<_veryUrgent" id="veryUrgent_Q12"><label>Eye injury<</label><br>
+
+			</div>
+			</form>
+			<form>
+				<input type="checkbox" name="dislocation" value="dislocation_veryUrgent" id="veryUrgent_Q13"><label>Dislocation of large joint</label><br>
+
+				<input type="checkbox" name="Fracture" value="Fracture-compound_veryUrgent" id="veryUrgent_Q14"><label>Fracture-compound</label><br>
+
+				<input type="checkbox" name="Burn20%" value="Burn_over_20%_veryUrgent" id="veryUrgent_Q15"><label>Burn over 20%</label><br>
+
+				<input type="checkbox" name="Burn-electrical" value="Burn-electrical_veryUrgent" id="veryUrgent_Q16"><label>Burn-electrical</label><br>
+
+				<input type="checkbox" name="Burn-circumferential" value="Burn-circumferential_veryUrgent" id="veryUrgent_Q17"><label>Burn-circumferential</label><br>
+
+				<input type="checkbox" name="Burn-chemical" value="Burn-chemical_veryUrgent" id="veryUrgent_Q18"><label>Burn-chemical</label><br>
+
+				<input type="checkbox" name="Poisoning/Overdose" value="Poisoning/Overdose_veryUrgent" id="veryUrgent_Q19"><label>Poisoning/Overdose</label><br>
+
+				<input type="checkbox" name="Diabetic-glucose>11" value="Diabetic-glucose>11_veryUrgent" id="veryUrgent_Q20"><label>Diabetic-glucose>11 & ketonuria</label><br>
+
+				<input type="checkbox" name="Vomiting_blood" value="Vomiting_blood_veryUrgent" id="veryUrgent_Q21"><label>Vomiting fresh blood</label><br>
+
+				<input type="checkbox" name="Pregnancy_abdominal_trauma" value="Pregnancy_abdominal_trauma_veryUrgent" id="veryUrgent_Q22"><label>Pregnancy and abdominal trauma</label><br>
+
+				<input type="checkbox" name="Pregnancy_abdominal_pain" value="Pregnancy_abdominal_pain_veryUrgent" id="veryUrgent_Q23"><label>Pregnancy and abdominal pain</label><br>
+
+				<input type="checkbox" name="Severe_pain" value="Severe_pain_veryUrgent" id="veryUrgent_Q24"><label>Severe pain</label><br>
+
+			</form>
+			<h5 class="hd4 Urgent">Urgent</h5>
+			<form>
+				<input type="checkbox" name="Haemorrhage_controlled" value="Haemorrhage-controlled_Urgent" id="UrgentQ1"><label>Haemorrhage-controlled</label><br> 
+
+				<input type="checkbox" name="DislocationOfFinger" value="DislocationOfFinger_Urgent" id="UrgentQ2"><label>Dislocation of finger or toe</label><br>
+
+				<input type="checkbox" name="Fracture_closed" value="Fracture_closed_Urgent" id="UrgentQ3"><label>Fracture-closed</label><br>
+
+				<input type="checkbox" name="Burn-other" value="Burn-other_Urgent" id="UrgentQ4"><label>Burn-other</label><br>
+
+				<input type="checkbox" name="Abdominal_pain_Urgent" value="Abdominal_pain_Urgent" id="UrgentQ5"><label>Abdominal pain</label><br>
+
+				<input type="checkbox" name="glucose_over17" value="glucose_over17_Urgent" id="UrgentQ6"><label>Diabetic-glucose over 17(no ketonuria)</label><br>
+
+				<input type="checkbox" name="Vomiting_persistently" value="Vomiting_persistently_Urgent" id="UrgentQ7"><label>Vomiting persistently</label><br>
+
+				<input type="checkbox" name="pregnancy_trauma" value="pregnancy_trauma_Urgent" id="UrgentQ8"><label>pregnancy and trauma</label><br>
+
+				<input type="checkbox" name="pregnancy_PV_bleed" value="pregnancy_PV_bleed_Urgent" id="UrgentQ9 "><label>pregnancy and PV bleed</label><br>
+
+				<input type="checkbox" name="Moderate_pain" value="Moderate_pain_Urgent" id="UrgentQ10"><label>Moderate pain</label><br>
+			</form>
+			<h5 class="hd5 Deceased">Deceased</h5>
+			<form>
+				<input type="checkbox" name="Deceased" value="Deceased" id="Deceased_Q1"><label>Deceased</label>
+			</form>
+
+		</div>
+		<div class="cl3">
+			<h5 class="hd6">Vitals</h5>
+			<form>
+				<span>Recorded At: 
+				<label for="date_pg">Date</label><input type="text" name="Date" id="date_pg" class="date"></input>
+				<label for="Time_pg">Time</label><input type="text" name="Time" id="Time_pg"><br></span>
+				<label for="Pluse_pg">Pluse</label><input type="text" name="Pluse" id="Pluse_pg" class="main" value="200"><span class="side">3</span><br>
+				<label for="sBP_pg">s BP</label><input type="text" name="sBP" id="sBP_pg" class="main" value="100"><span class="side">1</span><br>
+				<label for="dBP_pg">d BP</label><input type="text" name="dBP" id="dBP_pg" class="main" value="98"><br>
+				<label for="RR_pg">RR</label><input type="text" name="RR" id="RR_pg" class="main" value="78"><span class="side">3</span><br>
+				<label for="O2_Sat_pg">O2 Sat:</label><input type="text" name="O2_Sat" id="O2_Sat_pg" class="main" value="24"><br>
+				
+				<label for="Sup_O2_pg">Sup O2</label><select name="pregnanacy_test" disabled>
+				<option value=""></option>
+				</select><br>
+
+				<label for="Temp_pg">Temp</label><input type="text" name="Temp" id="Temp_pg" class="main" value="43"><span class="side">2</span><br>
+
+				<label for="AVPU_pg">AVPU</label><select name="pregnanacy_test" disabled>
+				<option value="React to voice">React to voice</option>
+				</select><span class="side">1</span><br>
+
+				<label for="GCS_pg">GCS</label><select name="pregnanacy_test" disabled>
+				<option value="0">0</option>
+				</select><br>
+
+				<label for="Mobility_pg">Mobility</label><select name="pregnanacy_test" disabled>
+				<option value=""></option>
+				</select><br>
+				
+				<label for="Trauma_pg">Trauma</label><select name="pregnanacy_test" disabled>
+		        <option value=""></option>
+		        </select><br><br>
+				<span>Total TEWS</span><span class="lst">4</span><br>	
+			</form>
+		</div>
+		<div class="cl4">
+			<h5 class="hd7">Actions</h5>
+			<p>Results<p>
+			<form>
+				<input type="checkbox" name="SpO2"><label class="last reded">SpO2 Checked</label><input type="text" name="SpO2"></input><br>
+				<input type="checkbox" name="O2" checked="true"><label class="last reded">O2 given</label><br>
+				<input type="checkbox" name="ECG" checked="true"><label class="last">Immediate ECG</label><br>
+				<input type="checkbox" name="IV"><label class="last">IV</label><br>
+				<input type="checkbox" name="Resus"><label class="last">Move to Resus</label><br>
+				<input type="checkbox" name="FPG"><label class="last">Finger Prick Glucotest</label><input type="text" name="FPG"></input><br>
+				<input type="checkbox" name="Food/drink"><label class="last">Give food or drink</label><br>
+				<input type="checkbox" name="Urine_Dipsticks"><label class="last">Urine Dipsticks(+ketones)</label><input type="text" name="FPG"></input><br>
+				<input type="checkbox" name="Urine_pregnanacy_test"><label class="last" style="margin-right: -1%;">Urine pregnanacy test</label>
+				<select style=""name="pregnanacy_test">
+		        <option value=""></option>
+		        </select><br>
+				<input type="checkbox" name="Paracetamol"><label class="last">Paracetamol 1g PO stat</label><br>
+				<input type="checkbox" name="blankets"><label class="last">Warm with blankets</label><br>
+				<input type="checkbox" name="Finger_prick_Hb"><label class="last">Finger prick Hb</label><input type="text" name="Finger_prick_Hb"></input><br>
+				<input type="checkbox" name="HandOver"><label class="last reded">Hand over to SHCP</label><br>
+			</form>
+
+		</div>
+	
+	</body>
+	</html>

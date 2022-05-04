@@ -1,0 +1,207 @@
+<DOCTYPE html>
+	<html>
+	<head>
+		<title>Form</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	    <script type="text/javascript">
+	    	$(document).ready(function(){
+			  $("div").children("label.lst").css({"margin-bottom" :"1%"});
+			}); 
+
+			$(document).ready(function(){
+			  $("div").children("button.smt").css({"float": "right"});
+			});
+			$(document).ready(function(){
+			  $("form").children("input[type=text].fst").css({"margin-right": "0%"});
+			});
+			$(document).ready(function(){
+			  $("form").children("input[type=text].snd").css({"margin-left": "0%"});
+			});
+
+			$(document).ready(function(){
+			  $("#cls").click(function(){
+			    $("div.frm").hide();
+			});
+
+            $("#dis").click(function(){
+			   $("div.frm").show();
+			  });
+			});
+	    </script>
+		<style type="text/css">
+			*{box-sizing: border-box;
+			 font-family: Movement,Verdana ,sans-serif;
+			 font-size: 13px;
+			}
+			label{
+				width: 10%;
+				text-align: right;
+				display: inline-block;
+				margin-left: 30.3%;
+				color: #b0aeac;
+			}
+			select{
+				width: 13%;
+				margin-left: 1%;
+				margin-right: 1%;
+				color: black;
+			}
+			input[type=text]{
+				margin-left: 1%;
+				margin-right: 1%;
+				width: 13%;
+			}
+			.hed{
+				background-color:#dbd9d5;
+				padding: 0.5% 0 0.5% 0;
+			}
+			[class*='close-'] {
+				  color: #777;
+				  font: 14px/100% arial, sans-serif;
+				  position: absolute;
+				  right: 5%;
+				  text-decoration: none;
+				  text-shadow: 0 1px 0 #fff;
+				  top: 2.5%;
+				  font-weight: bolder;
+				  color: black;
+			}
+
+			.close-thik:after {
+              
+            }
+
+            div.frm{
+            	width: 95%;
+            	margin-left: 2%;
+            	display: none;
+
+            }
+            #dis{
+            	margin-left: 40%;
+            }
+            .btn{
+            	padding: 0.3% 0.5%;
+            }
+            .h{
+            	font-weight: bold;
+            	color: black;
+            }
+            #vtl{
+            	color: black;
+            }
+            span{
+            	color: #b0aeac;
+            }
+            .op1{
+            	display: none;
+            }
+
+		</style>
+	</head>
+	<body>
+		<div class="frm">
+		<form>
+			<div class="hed">
+			<span class="h">Neuro Vital - Bounce,David 81 M</span><a href="#" class="close-thik" id="cls">&#x2716;</a></div>
+			<label style="margin-left: 35%">Date</label><label  style="margin-left: 3%">Time</label><br>
+			<label style="margin-left: 30%" id ="vtl">Vitals:</label>
+			<input type="text" name="Date" class="fst" disabled>
+			<input type="text" name="Time" class="snd" disabled><br>
+			<div>
+			<label >Reaction L:</label><select name="Reaction_L" id="Reaction_L">
+				<option value="0" class="op1" selected></option>
+		        <option value="A">A</option>
+		        <option value="B">B</option>
+		        <option value="C">C</option>
+		        </select><br>
+			<label>Reaction R:</label><select name="Reaction_R" id="Reaction_R">
+				<option value="0" class="op1" selected></option>
+		        <option value="A">A</option>
+		        <option value="B">B</option>
+		        <option value="C">C</option>
+		        </select><br>
+			<label>Equality:</label><select name="Equality" id="Equality">
+				<option value="0" class="op1" selected></option>
+		        <option value="A">A</option>
+		        <option value="B">B</option>
+		        <option value="C">C</option>
+		        </select><br>
+		    <label>Size L:</label><input type="text" name="sizeL" disabled><span> mm</span><br>
+		    <label>Size R:</label><input type="text" name="sizeR" disabled><span> mm</span><br>
+		    <label>Eyes:</label><select name="pregnanacy_test">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Verbal:</label><select name="Verbal">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Motor</label><select name="Motor">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Movement Arms L:</label><select name="Movement_Arms_L">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Movement Arms R:</label><select name="Movement_Arms_R">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Movement Legs L:</label><select name="Movement_Legs_L">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Movement Legs R:</label><select name="Movement_Legs_R">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Strength Arms L:</label><select name="Strength_Arms_L">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Strength Arm R:</label><select name="Strength_Arm_R">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Strength Leg L:</label><select name="Strength_Leg_L">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Strength Leg R:</label><select name="pregnanacy_test">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Siezure:</label><select name="Siezure">
+		        <option value=""></option>
+		        </select><br>
+		    <label>Duration:</label><input type="text" name="Duration:" disabled><span> min</span><br>
+		    <label>CSF Drainage:</label><input type="text" name="CSF_Drainage" disabled><span> ml</span><br>
+		    <label>MAP</label><input type="text" name="MAP" disabled><span> mmHg</span><br>
+		    <label>ICP</label><input type="text" name="ICP" disabled><span> mmHg</span><br>
+		    <label>CPP</label><input type="text" name="CPP" disabled><span> mmHg</span><br>
+		    <label>Cerebral O2:</label><input type="text" name="Cerebral_O2" disabled><span> %</span><br>
+		    <label class="lst">Cerebral Temp:</label><input type="text" name="Cerebra_Temp" disabled><span> <sup>o</sup>C</span><br>
+		    <hr>
+		    <button  class="btn" onclick="clr()">Cancel</button>
+		    <button type="submit" class="smt btn" onclick="sbtn()">Submit</button>     
+		    </div>
+	  
+		</form>
+		</div>
+
+		    <button id="dis">Form</button>
+		    <script type="text/javascript">
+		    	function sbtn(){
+		    	var a=document.getElementById('Reaction_L').value;
+		    	var b=document.getElementById('Reaction_R').value;
+		    	var c=document.getElementById('Equality').value;
+		    	
+		    	if((a==0)||(b==0)||(c==0)){
+		    		alert("the first 3 selects must be filled")
+		    	}
+		    	else{
+		    		alert("The values of a,b,c are "+a+","+b+","+c+" respectively")
+		    	}
+		    }
+		    function clr(){
+		    	document.getElementById('Reaction_L').value="";
+		    	document.getElementById('Reaction_R').value="";
+		    	document.getElementById('Equality').value="";
+
+		    }
+
+		    </script>
+
+	</body>
+</html>
